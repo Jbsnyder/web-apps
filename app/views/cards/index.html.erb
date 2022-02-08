@@ -1,0 +1,31 @@
+#create a deck
+<%
+numbers = [1,2,3,4,5,6,7,8,9,10,"jack","queen","king","ace"]
+suits = ["clubs","spades","diamonds","hearts"]
+
+
+deck = []
+    for number in numbers
+        for suit in suits
+            deck<<"#{number}_of_#{suit}"
+        end
+    end
+
+shuffled_deck = deck.shuffle
+hand = shuffled_deck[0,5]
+%>
+
+<h1> Pick your cards </h1>
+
+<% for card in hand %>
+    <img src="/images/cards/<%=card%>.svg">
+ <%end%>
+
+<ul>
+<li> <%= shuffled_deck[0] %> </li>
+<li> <%= shuffled_deck[1] %></li>
+<li> <%= shuffled_deck[2] %></li>
+<li> <%= shuffled_deck[3] %></li>
+<li> <%= shuffled_deck[4] %></li>
+</ul>
+

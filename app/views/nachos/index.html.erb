@@ -1,0 +1,16 @@
+<%
+fillings = ["Carnitas","Al Pastor","Cheez","Veggie"]
+
+
+
+%>
+
+<h1> I love Nachos <h1>
+<p> They're superior to tacos<p>
+<ul> 
+<% for filling in fillings %>
+    <li> <%= filling %> </li>
+    <%end%>
+</ul>
+
+<p> Currently, ther are <%=fillings.count%> kinds of tacos. <p>
